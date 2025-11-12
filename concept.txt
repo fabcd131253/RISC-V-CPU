@@ -1,0 +1,21 @@
+DRAM ROM SRAM DMA
+
+DRAM是外部RAM（記憶體）
+ROM是唯讀記憶體（存放boot.s）?
+DMA負責在CPU外轉換各RAM的資料
+初始資料放在DRAM中，要透過DMA轉存至DM/IM中
+
+ROM: 				0x0000_0000 -	0x0000_1FFF	(0x1FFF) 		(13bits)
+IM(SRAM):			0x0001_0000 -	0x0001_FFFF	(0xFFFF)		(16bits)
+DM(SRAM):			0x0002_0000 -	0x0002_FFFF	(0xFFFF)		(16bits)
+DMA:				0x1002_0000 -	0x1002_0200	(0x200)			(10bits)
+WDT:				0x1001_0000 -	0x1001_03FF 	(0x3FF)			(10bits)
+DRAM:				0x2000_0000 -	0x201F_FFFF 	(0x1F_FFFF)	(21bits)
+
+1bit of memory is for 1byte
+
+Descriptor List:	0x0002_FF00 -	0x0002_FFFF	(store in DM)
+
+DMA自己有記憶體? 200bytes
+
+DMASRC 
