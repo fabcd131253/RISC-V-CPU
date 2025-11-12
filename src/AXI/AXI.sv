@@ -727,8 +727,8 @@ module AXI(
 	reg W_s1_is_m1_active, W_s2_is_m1_active, W_s3_is_m1_active, W_s4_is_m1_active, W_s5_is_m1_active;
 	reg W_s1_is_m2_active, W_s2_is_m2_active, W_s3_is_m2_active, W_s4_is_m2_active, W_s5_is_m2_active;
 
-
-
+	reg B_s1_is_m1_active, B_s2_is_m1_active, B_s3_is_m1_active, B_s4_is_m1_active, B_s5_is_m1_active;
+	reg B_s1_is_m2_active, B_s2_is_m2_active, B_s3_is_m2_active, B_s4_is_m2_active, B_s5_is_m2_active;
 
 
 	// reg R_s0_is_m0_active, R_s0_is_m1_active;
@@ -1497,8 +1497,6 @@ module AXI(
 	reg W_s0_active, W_s1_active; // s0/s1 only receive data from m1
 	reg B_s0_active, B_s1_active;
 
-	reg B_s1_is_m1_active, B_s2_is_m1_active, B_s3_is_m1_active, B_s4_is_m1_active, B_s5_is_m1_active;
-	reg B_s1_is_m2_active, B_s2_is_m2_active, B_s3_is_m2_active, B_s4_is_m2_active, B_s5_is_m2_active;
 
 
 	wire W_s1_is_m1_collid_cond = (!W_s2_is_m1_active && !W_s3_is_m1_active && !W_s4_is_m1_active && !W_s5_is_m1_active);
